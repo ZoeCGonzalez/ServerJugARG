@@ -101,7 +101,7 @@
       <h2>Danos una manito</h2>
       <button onclick="openLink('https://cafecito.app/misiocafecito')">Cafecito</button>
       <button onclick="openLink('https://discord.com/invite/FEdguGreJM')">Discord</button>
-      <button onclick="copyToClipboard('100.94.77.84:8211')">100.94.77.84:8211</button>
+      <button onclick="copyToClipboard('100.94.77.84:8211')">Copia la IP del Server</button>
     </main>
   </div>
 
@@ -109,11 +109,12 @@
     <p>&copy; 2024 Derechos Reservados - Nytt | <a href="https://twitter.com/nyttclover" target="_blank">Sígueme en Twitter</a></p>
   </footer>
 
-  <script>
+ 
+<script>
     function openLink(url) {
       window.open(url, '_blank');
     }
-
+  
     function copyToClipboard(text) {
       const textarea = document.createElement('textarea');
       textarea.value = text;
@@ -121,6 +122,18 @@
       textarea.select();
       document.execCommand('copy');
       document.body.removeChild(textarea);
+  
+      // Crear un elemento para mostrar el mensaje de éxito
+      const successMessage = document.createElement('div');
+      successMessage.textContent = '¡IP del servidor copiada correctamente!';
+      successMessage.style.color = 'green';  // Establecer el color del texto
+      successMessage.style.marginTop = '10px';  // Ajustar el margen superior
+      document.querySelector('main').appendChild(successMessage);
+  
+      // Eliminar el mensaje después de unos segundos (opcional)
+      setTimeout(() => {
+        document.querySelector('main').removeChild(successMessage);
+      }, 3000); // 3000 milisegundos = 3 segundos (ajusta según sea necesario)
     }
   </script>
 
