@@ -4,16 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Server Jugar</title>
+  <title>Server</title>
   <style>
-    /* Estilos CSS aquí */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('fondo_imagen.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Alinear elementos verticalmente */
+      height: 100vh;
+    }
+
+    .welcome-section {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor del contenedor */
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 80%;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor del contenedor */
+    }
+
+    header {
+      background-color: #1976D2;
+      color: white;
+      padding: 1rem;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      margin-top: 0; /* Asegura que no haya espacio superior */
+    }
+
+    h1 {
+      margin: 0; /* Elimina el margen predeterminado para el h1 */
+    }
+
+    nav button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #1976D2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main button {
+      padding: 0.5rem 1rem;
+      background-color: #1976D2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 20px; /* Espacio entre el contenedor principal y el pie de página */
+    }
+
+    footer button {
+      padding: 0.5rem 1rem;
+      background-color: #1DA1F2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
   <div class="welcome-section">
     <h2>Bienvenidos</h2>
-    <!-- Puedes agregar más contenido de bienvenida si es necesario -->
   </div>
 
   <div class="container">
@@ -24,22 +99,16 @@
       <h2>Danos una manito</h2>
       <button onclick="openLink('https://cafecito.app/misiocafecito')">Cafecito</button>
       <button onclick="openLink('https://discord.com/invite/FEdguGreJM')">Discord</button>
-      <button onclick="copyToClipboard('100.94.77.84:8211')">100.94.77.84:8211</button>
     </main>
   </div>
+
+  <footer>
+    <button onclick="openLink('https://twitter.com/nyttclover')">Twitter</3></button>
+  </footer>
 
   <script>
     function openLink(url) {
       window.open(url, '_blank');
-    }
-
-    function copyToClipboard(text) {
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
     }
   </script>
 
