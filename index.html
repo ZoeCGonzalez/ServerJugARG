@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Server Jugar</title>
+  <style>
+    /* Estilos CSS aquí */
+  </style>
+</head>
+<body>
+
+  <div class="welcome-section">
+    <h2>Bienvenidos</h2>
+    <!-- Puedes agregar más contenido de bienvenida si es necesario -->
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Server Jugar</h1>
+    </header>
+    <main>
+      <h2>Danos una manito</h2>
+      <button onclick="openLink('https://cafecito.app/misiocafecito')">Cafecito</button>
+      <button onclick="openLink('https://discord.com/invite/FEdguGreJM')">Discord</button>
+      <button onclick="copyToClipboard('100.94.77.84:8211')">100.94.77.84:8211</button>
+    </main>
+  </div>
+
+  <script>
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+
+    function copyToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+  </script>
+
+</body>
+</html>
