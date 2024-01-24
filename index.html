@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Server</title>
+  <title>Server Jugar</title>
   <style>
     body {
       margin: 0;
@@ -72,16 +72,17 @@
 
     footer {
       margin-top: 20px; /* Espacio entre el contenedor principal y el pie de página */
+      text-align: center;
     }
 
-    footer button {
-      padding: 0.5rem 1rem;
-      background-color: #1DA1F2;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: #1DA1F2;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -89,6 +90,7 @@
 
   <div class="welcome-section">
     <h2>Bienvenidos</h2>
+    <!-- Puedes agregar más contenido de bienvenida si es necesario -->
   </div>
 
   <div class="container">
@@ -99,16 +101,26 @@
       <h2>Danos una manito</h2>
       <button onclick="openLink('https://cafecito.app/misiocafecito')">Cafecito</button>
       <button onclick="openLink('https://discord.com/invite/FEdguGreJM')">Discord</button>
+      <button onclick="copyToClipboard('100.94.77.84:8211')">100.94.77.84:8211</button>
     </main>
   </div>
 
   <footer>
-    <button onclick="openLink('https://twitter.com/nyttclover')">Twitter</3></button>
+    <p>&copy; 2024 Derechos Reservados - Nytt | <a href="https://twitter.com/nyttclover" target="_blank">Sígueme en Twitter</a></p>
   </footer>
 
   <script>
     function openLink(url) {
       window.open(url, '_blank');
+    }
+
+    function copyToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
     }
   </script>
 
