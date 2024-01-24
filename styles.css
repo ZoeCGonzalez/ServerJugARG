@@ -10,6 +10,8 @@ body {
     flex-direction: column; /* Alinear elementos verticalmente */
     height: 100vh;
   }
+
+  
   
   .welcome-section {
     text-align: center;
